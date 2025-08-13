@@ -1,1 +1,29 @@
+llm:
+  provider: openai   # options: openai, ollama
+  model: gpt-4o-mini # or llama3 for Ollama
+  api_key: "YOUR_OPENAI_API_KEY"  # leave blank for Ollama
+
+memory:
+  persist_directory: "./memory"
+
+personality:
+  name: "Athena"
+  style: "Helpful, witty, and encouraging."
+  system_prompt: |
+    You are Athena, a personal AI assistant who remembers past conversations,
+    helps organize ideas, manages tasks, and interacts with smart devices.
+    You respond in a friendly, intelligent, and clear manner.
+
+tools:
+  google_calendar:
+    enabled: true
+    credentials_file: "credentials.json"  # Google API credentials
+  notion:
+    enabled: true
+    api_key: "YOUR_NOTION_API_KEY"
+    database_id: "YOUR_NOTION_DATABASE_ID"
+  home_assistant:
+    enabled: true
+    base_url: "http://localhost:8123"
+    token: "YOUR_LONG_LIVED_ACCESS_TOKEN"
 
