@@ -1,7 +1,6 @@
 llm:
   provider: openai   # options: openai, ollama
   model: gpt-4o-mini # or llama3 for Ollama
-  api_key: "YOUR_OPENAI_API_KEY"  # leave blank for Ollama
 
 memory:
   persist_directory: "./memory"
@@ -17,13 +16,8 @@ personality:
 tools:
   google_calendar:
     enabled: true
-    credentials_file: "credentials.json"  # Google API credentials
   notion:
     enabled: true
-    api_key: "YOUR_NOTION_API_KEY"
-    database_id: "YOUR_NOTION_DATABASE_ID"
   home_assistant:
     enabled: true
-    base_url: "http://localhost:8123"
-    token: "YOUR_LONG_LIVED_ACCESS_TOKEN"
 
