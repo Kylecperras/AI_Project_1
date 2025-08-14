@@ -1,6 +1,12 @@
 import yaml
 from memory import Memory
 import os
+import openai
+
+openai_api_key = os.getenv("OPENAI_API_KEY")
+if not openai_api_key:
+    raise ValueError("OPENAI_API_KEY not set in environment variables.")
+openai.api_key = openai_api_key
 
 class Assistant:
     def __init__(self, config_path="config.yaml"):
